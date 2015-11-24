@@ -1,8 +1,8 @@
 {
-  "name": "stupid-imageload",
+  "name": "stupid-imageloader",
   "version": "1.0.0",
   "description": "A simple image loader",
-  "main": "./imageload.js",
+  "main": "./imageloader.js",
   "directories": {
     "test": "test"
   },

@@ -1,25 +1,30 @@
-var Imageload = require('../../imageload');
+var Imageload = require('../../imageloader');
 var imageload = Imageload();
 
-var src = 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png';
+// - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-imageload.load(src)
-.success(function(img, msg){
-	console.log("FIRST", img, msg);
-
-	imageload.load(src)
-	.success(function(img, msg){
-		console.log("SECOND", img, msg);
-	});
-
-	imageload.load('https://www.npmjs.com/static/images/not-found.png').success(function(img, msg){
-		console.log("three", img, msg);
-		imageload.load('https://www.npmjs.com/static/images/not-found.png').success(function(img, msg){
-			console.log("three", img, msg);
-		})
-	})
+// Load image & cache
+imageload.load('image.jpg') // returns a promise (stupid-deferred)
+.success(function(image){
+	// Do something
+})
+.error(function(){
+	// Do something
 });
 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+imageload.load('image.jpg') // returns a promise (stupid-deferred)
+.then(function(){
+	return imageload.load('new-image.jpg');
+})
+.then(function(){
+	return imageload.load('another-new-image.jpg');
+})
+.then(function(){
+	// All 3 images is loaded after each other
+});
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
