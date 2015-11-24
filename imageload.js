@@ -1,8 +1,23 @@
 var Deferred = require('stupid-deferred');
 
+/**
+ * Image loader
+ * @constructor
+ */
 function Loadimage(opts){
-	var self = {};
-	var opts = opts || {};
+	/**
+     * @define {object} Collection of public methods.
+     */
+    var self = {};
+
+    /**
+     * @define {object} Options for the constructor 
+     */
+    var opts = opts || {};
+
+    /**
+     * @define {object} Cache for loaded images
+     */
 	var cache = {};
 
 	function load(src){
