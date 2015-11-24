@@ -1,0 +1,37 @@
+{
+  "name": "stupid-imageload",
+  "version": "1.0.0",
+  "description": "A simple image loader",
+  "main": "./imageload.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "stupid-deferred": "^1.0.3"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "faucet": "0.0.1",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "tap-dot": "^1.0.0",
+    "tape": "^4.2.2",
+    "tape-run": "^2.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
+  },
+  "scripts": {
+    "test": "browserify test/*.js | tape-run --render=\"faucet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StupidStudio/stupid-imageload.git"
+  },
+  "author": "David Adalberth Andersen <david@stupid-studio.com> (http://stupid-studio.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StupidStudio/stupid-imageload/issues"
+  },
+  "homepage": "https://github.com/StupidStudio/stupid-imageload#readme"
+}
