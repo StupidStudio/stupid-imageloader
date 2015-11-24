@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StupidStudio/stupid-imageload.git"
+    "url": "git+https://github.com/StupidStudio/stupid-imageloader.git"
   },
   "author": "David Adalberth Andersen <david@stupid-studio.com> (http://stupid-studio.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/StupidStudio/stupid-imageload/issues"
+    "url": "https://github.com/StupidStudio/stupid-imageloader/issues"
   },
-  "homepage": "https://github.com/StupidStudio/stupid-imageload#readme"
+  "homepage": "https://github.com/StupidStudio/stupid-imageloader#readme"
 }

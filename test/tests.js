@@ -25,7 +25,6 @@ test('Image failed loading and return error', function(t){
 
 test('Loaded image return image from cache', function(t){
 	t.plan(2);
-
 	var imageloader = Imageloader();
 	var src = 'https://en.wikipedia.org/static/images/project-logos/enwiki.png';
 	var image;
@@ -43,5 +42,25 @@ test('Loaded image return image from cache', function(t){
 	}).error(function(){
 		t.fail();
 	});
+});
 
+test('Imageloader is chainable (success and error)', function(t){
+	t.plan(3);
+	t.timeoutAfter(1000);
+	var imageloader = Imageloader();
+	imageloader.load('https://en.wikipedia.org/static/images/project-logos/enwiki.png') 
+	.then(function(){
+		t.pass();
+		return imageloader.load('https://www.npmjs.com/static/images/npm-logo.svg');
+	}, function(){t.fail()})
+	.then(function(){
+		t.pass();
+		return imageloader.load('fakeimage.jpg');
+	}, function(){t.fail()})
+	.then(function(){
+		t.fail(); 
+	}, function(){
+		// Should get an error
+		t.pass();
+	});
 });
