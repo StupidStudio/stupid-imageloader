@@ -9,9 +9,9 @@ Load image:
 ```javascript
 
 var Imageloader = require('stupid-imageloader');
-var imageLoader = Imageloader();
+var imageloader = Imageloader();
 
-imageLoader.load('image.jpg') // returns a promise (stupid-deferred)
+imageloader.load('image.jpg') // returns a promise (stupid-deferred)
 .success(function(image){
 	// Do something
 })
