@@ -4,7 +4,7 @@ var Deferred = require('stupid-deferred');
  * Image loader
  * @constructor
  */
-function Loadimage(opts){
+function Imageloader(opts){
 	/**
      * @define {object} Collection of public methods.
      */
@@ -73,4 +73,4 @@ function Loadimage(opts){
 }
 
 /** @export */
-module.exports = Loadimage; 
+module.exports = Imageloader; 
