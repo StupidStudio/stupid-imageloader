@@ -26,7 +26,10 @@ Chain loading events:
 ```javascript
 imageloader.load('image.jpg') // returns a promise (stupid-deferred)
 .then(function(){
+	// On success
 	return imageloader.load('new-image.jpg');
+}, function(){
+	// On error
 })
 .then(function(){
 	return imageloader.load('another-new-image.jpg');
